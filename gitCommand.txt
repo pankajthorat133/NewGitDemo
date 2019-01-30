@@ -1,0 +1,177 @@
+Master@IN-LP-18 MINGW64 /d/NewGitDemo
+$ git init
+Initialized empty Git repository in D:/NewGitDemo/.git/
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git config --global user.name "pankajthorat133"
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git config --global user.email "thoratpankaj133@gmail.com"
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git remote add origin https://github.com/pankajthorat133/NewGitDemo.git
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git add *
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Test.txt
+
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git commit -m "First Test Document Commit"
+[master (root-commit) 66a194d] First Test Document Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Test.txt
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git push --set
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ get checkout master
+bash: get: command not found
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git checkout master
+Already on 'master'
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git branch
+* master
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ ^C
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git push --set-upstream origin master
+Username for 'https://github.com': pankajthorat133
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pankajthorat133/NewGitDemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pankajthorat133/NewGitDemo
+   66a194d..ae11bb9  master     -> origin/master
+Updating 66a194d..ae11bb9
+Fast-forward
+ Test.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git add Test.text
+fatal: pathspec 'Test.text' did not match any files
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git add *
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Test.txt
+
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git commit -m "Second update "
+[master 6853cf0] Second update
+ 1 file changed, 1 insertion(+)
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git push
+Username for 'https://github.com': pankajthorat133
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 288 bytes | 144.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/pankajthorat133/NewGitDemo.git
+   ae11bb9..6853cf0  master -> master
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pankajthorat133/NewGitDemo
+   6853cf0..29caafe  master     -> origin/master
+Updating 6853cf0..29caafe
+Fast-forward
+ Test.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Master@IN-LP-18 MINGW64 /d/NewGitDemo (master)
+$ git status
